@@ -1,0 +1,15 @@
+# If not running interactively, don't do anything (leave this at the top of this file)
+[[ $- != *i* ]] && return
+
+# All the default Omarchy aliases and functions
+# (don't mess with these directly, just overwrite them here!)
+source ~/.local/share/omarchy/default/bash/rc
+alias fan_on='nbfc set -s 100'
+alias fan_off='nbfc set -s 0'
+alias fan_auto='nbfc set --auto'
+alias fan_silent='nbfc set -s 10'
+# Add your own exports, aliases, and functions here.
+#
+# Make an alias for invoking commands you use constantly
+# alias p='python'
+export PATH=$PATH:/home/srujan/.local/share/gem/ruby/3.4.0/bin
