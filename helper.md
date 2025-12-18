@@ -30,3 +30,22 @@ Check the batter status :
     capacity:            62.2543%
     technology:          lithium-ion
     icon-name:          'battery-full-charged-symbolic'
+
+
+
+## Setting the hyprland to run on GPU
+ lspci -d ::03xx -> to get the GPUs and the PCIs
+       00:02.0 VGA compatible controller: Intel Corporation CometLake-H GT2 [UHD Graphics] (rev 05)
+       01:00.0 VGA compatible controller: NVIDIA Corporation GA106M [GeForce RTX 3060 Mobile / Max-Q] (rev a1)
+       
+ ls -l /dev/dri/by-path -> this will get the path for the graphic cards availabe
+      lrwxrwxrwx     - root 18 Dec 19:39   pci-0000:00:02.0-card -> ../card2
+      lrwxrwxrwx     - root 18 Dec 19:39   pci-0000:00:02.0-render -> ../renderD129
+      lrwxrwxrwx     - root 18 Dec 19:39   pci-0000:01:00.0-card -> ../card1
+      lrwxrwxrwx     - root 18 Dec 19:39   pci-0000:01:00.0-render -> ../renderD128
+
+
+to configure which GPU to use, we need to setup AQ_DRM_DEVICES key (which will be avaiable in /home/srujan/.config/uwsm/env)
+- export AQ_DRM_DEVICES="/dev/dri/card1:/dev/dri/card2"  -> This will allow the hyprland to run on card1 if present (Nvidia) else card2 (dedicted)
+
+reference : https://wiki.hypr.land/Configuring/Multi-GPU/
