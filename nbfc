@@ -1,0 +1,12 @@
+this is to setup the fan controls for archlinux 
+
+
+Installation : yay -S nbfc-linux
+
+Steps : 
+- sudo nbfc update
+- sudo nbfc config --set auto
+- sudo nbfc restart -r
+- nbfc set -s <SPEED>
+- nbfc set --auto
+- sudo systemctl enable nbfc_service
