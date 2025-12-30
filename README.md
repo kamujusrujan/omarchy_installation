@@ -52,9 +52,9 @@ Once we have the space required, we are good to go.
     - mkdir -p /mnt/var/cache/pacman/pkg
     - mkdir -p /mnt/var/log
 
-    - mount -o noatime,compress=zstd,discard=async,space_cache=v2,subvol=@home /dev/nvme0n1p5/mnt/home
-    - mount -o noatime,compress=zstd,discard=async,space_cache=v2,subvol=@pkg /dev/nvme0n1p5/mnt/var/cache/pacman/pkg
-    - mount -o noatime,compress=zstd,discard=async,space_cache=v2,subvol=@log /dev/nvme0n1p5/mnt/var/log
+    - mount -o noatime,compress=zstd,discard=async,space_cache=v2,subvol=@home /dev/nvme0n1p5 /mnt/home
+    - mount -o noatime,compress=zstd,discard=async,space_cache=v2,subvol=@pkg /dev/nvme0n1p5 /mnt/var/cache/pacman/pkg
+    - mount -o noatime,compress=zstd,discard=async,space_cache=v2,subvol=@log /dev/nvme0n1p5 /mnt/var/log
 
     - mkdir -p /mnt/boot
     - mount /dev/nvme0n1p4 /mnt/boot
@@ -72,3 +72,4 @@ references :
 - https://learn.omacom.io/2/the-omarchy-manual/96/manual-installation
 
 - https://www.youtube.com/watch?v=WaWB3F-ffcI
+
