@@ -1,4 +1,4 @@
-﻿## THIS IS A GUIDE TO INSTALL OMARCHY ON DISK PARTITION
+œœ﻿## THIS IS A GUIDE TO INSTALL OMARCHY ON DISK PARTITION
 
 since we dont have an official way to install omarchy on partition disk. I am writing this guide to help myself to follow and install without any issue
 
@@ -72,4 +72,5 @@ references :
 - https://learn.omacom.io/2/the-omarchy-manual/96/manual-installation
 
 - https://www.youtube.com/watch?v=WaWB3F-ffcI
+
 
