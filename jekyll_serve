@@ -1,0 +1,11 @@
+
+to run github pages server locally  : 
+install ruby and gem (package managar)
+
+0. install bundle and jekyll 
+--  gem install bundler jekyll 
+
+1. run the server 
+-- bundle exec jekyll serve
+
+Possible error : we need to add vendor path in the exclusion list in gemfilev
