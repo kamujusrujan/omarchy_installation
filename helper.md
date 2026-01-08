@@ -1,4 +1,4 @@
-Check the batter status : 
+### Check the batter status : 
  - upower -e  -> get all the information about power details
  - upower -i <battery device> -> get the information about the battery
 
@@ -33,7 +33,7 @@ Check the batter status :
 
 
 
-## Setting the hyprland to run on GPU
+###  Setting the hyprland to run on GPU
  lspci -d ::03xx -> to get the GPUs and the PCIs
        00:02.0 VGA compatible controller: Intel Corporation CometLake-H GT2 [UHD Graphics] (rev 05)
        01:00.0 VGA compatible controller: NVIDIA Corporation GA106M [GeForce RTX 3060 Mobile / Max-Q] (rev a1)
@@ -49,3 +49,8 @@ to configure which GPU to use, we need to setup AQ_DRM_DEVICES key (which will b
 - export AQ_DRM_DEVICES="/dev/dri/card1:/dev/dri/card2"  -> This will allow the hyprland to run on card1 if present (Nvidia) else card2 (dedicted)
 
 reference : https://wiki.hypr.land/Configuring/Multi-GPU/
+
+
+
+### fix the corrupt drive 
+sudo ntfsfix -d  /dev/sda1
