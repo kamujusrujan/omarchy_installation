@@ -54,3 +54,6 @@ reference : https://wiki.hypr.land/Configuring/Multi-GPU/
 
 ### fix the corrupt drive 
 sudo ntfsfix -d  /dev/sda1
+
+### Windows repair module 
+- chkdsk D: /f /x 
