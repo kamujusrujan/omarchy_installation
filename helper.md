@@ -56,4 +56,7 @@ reference : https://wiki.hypr.land/Configuring/Multi-GPU/
 sudo ntfsfix -d  /dev/sda1
 
 ### Windows repair module 
-- chkdsk D: /f /x 
+- chkdsk D: /f /x
+
+### Customizing the output audio sink 
+```pactl set-sink-volume @DEFAULT_SINK@ 100% 100%```
